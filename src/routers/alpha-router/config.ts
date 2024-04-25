@@ -12,6 +12,7 @@ export const DEFAULT_ROUTING_CONFIG_BY_CHAIN = (
     case ChainId.BASE:
     case ChainId.BASE_GOERLI:
     case ChainId.REDSTONE_GARNET:
+    case ChainId.REDSTONE:
       return {
         v2PoolSelection: {
           topN: 3,

@@ -27,6 +27,7 @@ import {
   USDC_OPTIMISM,
   USDC_OPTIMISM_GOERLI,
   USDC_POLYGON,
+  USDC_REDSTONE,
   USDC_SEPOLIA,
   USDT_ARBITRUM,
   USDT_BNB,
@@ -75,6 +76,7 @@ export const usdGasTokensByChain: { [chainId in ChainId]?: Token[] } = {
   [ChainId.AVALANCHE]: [DAI_AVAX, USDC_AVAX],
   [ChainId.BASE]: [USDC_BASE],
   [ChainId.REDSTONE_GARNET]: [],
+  [ChainId.REDSTONE]: [USDC_REDSTONE],
 };
 
 export type L1ToL2GasCosts = {

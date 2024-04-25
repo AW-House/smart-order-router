@@ -65,6 +65,8 @@ const SUBGRAPH_URL_BY_CHAIN: { [chainId in ChainId]?: string } = {
     'https://api.studio.thegraph.com/query/48211/uniswap-v3-base/version/latest',
   [ChainId.REDSTONE_GARNET]: 
     'http://stg.swap-redstone.w3us.site:8000/subgraphs/name/swap-v3-redstone-garnet',
+  [ChainId.REDSTONE]: 
+    'http://stg.swap-redstone.w3us.site:8000/subgraphs/name/swap-v3-redstone-mainnet',
 };
 
 const PAGE_SIZE = 1000; // 1k is max possible query size from subgraph.

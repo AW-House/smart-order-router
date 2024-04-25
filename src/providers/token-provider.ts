@@ -538,6 +538,14 @@ export const WBTC_MOONBEAM = new Token(
   'Wrapped BTC bridged using Multichain'
 );
 
+export const USDC_REDSTONE = new Token(
+  ChainId.REDSTONE,
+  '0xD5d59fC063e7548b6015A36fEb10B875924A19be',
+  6,
+  'USDC.e',
+  'Bridged USDC (Lattice)'
+);
+
 export class TokenProvider implements ITokenProvider {
   constructor(
     private chainId: ChainId,
@@ -795,6 +803,8 @@ export const USDC_ON = (chainId: ChainId): Token => {
       return USDC_BASE;
     case ChainId.BASE_GOERLI:
       return USDC_BASE_GOERLI;
+    case ChainId.REDSTONE:
+      return USDC_REDSTONE;
     default:
       throw new Error(`Chain id: ${chainId} not supported`);
   }

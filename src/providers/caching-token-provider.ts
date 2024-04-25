@@ -36,6 +36,7 @@ import {
   USDC_OPTIMISM,
   USDC_OPTIMISM_GOERLI,
   USDC_POLYGON,
+  USDC_REDSTONE,
   USDC_SEPOLIA,
   USDT_ARBITRUM,
   USDT_BNB,
@@ -147,6 +148,10 @@ export const CACHE_SEED_TOKENS: {
   [ChainId.REDSTONE_GARNET]: {
     // USDC: USDC_REDSTONE_GARNET,
     WETH: WRAPPED_NATIVE_CURRENCY[ChainId.REDSTONE_GARNET],
+  },
+  [ChainId.REDSTONE]: {
+    USDC: USDC_REDSTONE,
+    WETH: WRAPPED_NATIVE_CURRENCY[ChainId.REDSTONE],
   }
   // Currently we do not have providers for Moonbeam mainnet or Gnosis testnet
 };
