@@ -43,6 +43,8 @@ import {
   USDC_OPTIMISM,
   USDC_OPTIMISM_GOERLI,
   USDC_POLYGON,
+  USDC_REDSTONE,
+  USDC_REDSTONE_GARNET,
   USDC_SEPOLIA,
   USDT_ARBITRUM,
   USDT_BNB,
@@ -187,6 +189,12 @@ const baseTokensByChain: { [chainId in ChainId]?: Token[] } = {
   [ChainId.AVALANCHE]: [DAI_AVAX, USDC_AVAX],
   [ChainId.BASE]: [USDC_BASE],
   [ChainId.BLAST]: [WRAPPED_NATIVE_CURRENCY[ChainId.BLAST]!, USDB_BLAST],
+  [ChainId.REDSTONE]: [
+    USDC_REDSTONE,
+  ],
+  [ChainId.REDSTONE_GARNET]: [
+    USDC_REDSTONE_GARNET,
+  ],
 };
 
 class SubcategorySelectionPools<SubgraphPool> {

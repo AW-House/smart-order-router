@@ -43,6 +43,8 @@ import {
   USDC_OPTIMISM_GOERLI,
   USDC_OPTIMISM_SEPOLIA,
   USDC_POLYGON,
+  USDC_REDSTONE,
+  USDC_REDSTONE_GARNET,
   USDC_SEPOLIA,
   USDC_WORMHOLE_CELO,
   USDT_ARBITRUM,
@@ -114,6 +116,8 @@ export const usdGasTokensByChain: { [chainId in ChainId]?: Token[] } = {
   ],
   [ChainId.BASE]: [USDC_BASE, USDC_NATIVE_BASE],
   [ChainId.BLAST]: [USDB_BLAST],
+  [ChainId.REDSTONE_GARNET]: [USDC_REDSTONE_GARNET],
+  [ChainId.REDSTONE]: [USDC_REDSTONE],
 };
 
 export type L1ToL2GasCosts = {
