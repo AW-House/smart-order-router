@@ -657,7 +657,7 @@ export const USDB_BLAST = new Token(
 )
 
 export const USDC_REDSTONE_GARNET = new Token(
-  ChainId.REDSTONE,
+  ChainId.REDSTONE_GARNET,
   '0xD2cA61F265a2dA2d2CD7607F05C26eBfA18AD5F6',
   6,
   'mUSDC',
