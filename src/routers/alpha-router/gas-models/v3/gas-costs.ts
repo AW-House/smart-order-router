@@ -20,6 +20,8 @@ export const BASE_SWAP_COST = (id: ChainId): BigNumber => {
     case ChainId.AVALANCHE:
     case ChainId.BASE:
     case ChainId.BASE_GOERLI:
+    case ChainId.REDSTONE_GARNET:
+    case ChainId.REDSTONE:
       return BigNumber.from(2000);
     case ChainId.ARBITRUM_ONE:
     case ChainId.ARBITRUM_GOERLI:
@@ -38,6 +40,8 @@ export const BASE_SWAP_COST = (id: ChainId): BigNumber => {
       return BigNumber.from(2000);
     case ChainId.MOONBEAM:
       return BigNumber.from(2000);
+    default:
+      return BigNumber.from(2000);
   }
 };
 export const COST_PER_INIT_TICK = (id: ChainId): BigNumber => {
@@ -47,6 +51,8 @@ export const COST_PER_INIT_TICK = (id: ChainId): BigNumber => {
     case ChainId.SEPOLIA:
     case ChainId.BNB:
     case ChainId.AVALANCHE:
+    case ChainId.REDSTONE_GARNET:
+    case ChainId.REDSTONE:
       return BigNumber.from(31000);
     case ChainId.OPTIMISM:
     case ChainId.OPTIMISM_GOERLI:
@@ -67,6 +73,8 @@ export const COST_PER_INIT_TICK = (id: ChainId): BigNumber => {
     case ChainId.GNOSIS:
       return BigNumber.from(31000);
     case ChainId.MOONBEAM:
+      return BigNumber.from(31000);
+    default:
       return BigNumber.from(31000);
   }
 };
@@ -83,6 +91,8 @@ export const COST_PER_HOP = (id: ChainId): BigNumber => {
     case ChainId.AVALANCHE:
     case ChainId.BASE:
     case ChainId.BASE_GOERLI:
+    case ChainId.REDSTONE_GARNET:
+    case ChainId.REDSTONE:
       return BigNumber.from(80000);
     case ChainId.ARBITRUM_ONE:
     case ChainId.ARBITRUM_GOERLI:
@@ -97,6 +107,8 @@ export const COST_PER_HOP = (id: ChainId): BigNumber => {
     case ChainId.GNOSIS:
       return BigNumber.from(80000);
     case ChainId.MOONBEAM:
+      return BigNumber.from(80000);
+    default:
       return BigNumber.from(80000);
   }
 };

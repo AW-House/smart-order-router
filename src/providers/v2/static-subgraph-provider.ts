@@ -106,6 +106,12 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ],
   [ChainId.BASE_GOERLI]: [],
   [ChainId.BASE]: [WRAPPED_NATIVE_CURRENCY[ChainId.BASE], USDC_BASE],
+  [ChainId.ZORA]: [],
+  [ChainId.ZORA_SEPOLIA]: [],
+  [ChainId.ROOTSTOCK]: [],
+  [ChainId.BLAST]: [],
+  [ChainId.REDSTONE_GARNET]: [],
+  [ChainId.REDSTONE]: [],
 };
 
 /**

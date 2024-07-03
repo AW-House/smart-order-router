@@ -33,6 +33,8 @@ export const V3_CORE_FACTORY_ADDRESSES: AddressMap = {
   [ChainId.BASE_GOERLI]:
     CHAIN_TO_ADDRESSES_MAP[ChainId.BASE_GOERLI].v3CoreFactoryAddress,
   [ChainId.BASE]: CHAIN_TO_ADDRESSES_MAP[ChainId.BASE].v3CoreFactoryAddress,
+  [ChainId.REDSTONE_GARNET]: CHAIN_TO_ADDRESSES_MAP[ChainId.REDSTONE_GARNET].v3CoreFactoryAddress,
+  [ChainId.REDSTONE]: CHAIN_TO_ADDRESSES_MAP[ChainId.REDSTONE].v3CoreFactoryAddress,
   // TODO: Gnosis + Moonbeam contracts to be deployed
 };
 
@@ -55,6 +57,8 @@ export const QUOTER_V2_ADDRESSES: AddressMap = {
   [ChainId.BASE_GOERLI]:
     CHAIN_TO_ADDRESSES_MAP[ChainId.BASE_GOERLI].quoterAddress,
   [ChainId.BASE]: CHAIN_TO_ADDRESSES_MAP[ChainId.BASE].quoterAddress,
+  [ChainId.REDSTONE_GARNET]: CHAIN_TO_ADDRESSES_MAP[ChainId.REDSTONE_GARNET].quoterAddress,
+  [ChainId.REDSTONE]: CHAIN_TO_ADDRESSES_MAP[ChainId.REDSTONE].quoterAddress,
   // TODO: Gnosis + Moonbeam contracts to be deployed
 };
 
@@ -85,6 +89,8 @@ export const UNISWAP_MULTICALL_ADDRESSES: AddressMap = {
   [ChainId.BASE_GOERLI]:
     CHAIN_TO_ADDRESSES_MAP[ChainId.BASE_GOERLI].multicallAddress,
   [ChainId.BASE]: CHAIN_TO_ADDRESSES_MAP[ChainId.BASE].multicallAddress,
+  [ChainId.REDSTONE_GARNET]: CHAIN_TO_ADDRESSES_MAP[ChainId.REDSTONE_GARNET].multicallAddress,
+  [ChainId.REDSTONE]: CHAIN_TO_ADDRESSES_MAP[ChainId.REDSTONE].multicallAddress,
   // TODO: Gnosis + Moonbeam contracts to be deployed
 };
 
@@ -130,6 +136,10 @@ export const WETH9: {
     | ChainId.MOONBEAM
     | ChainId.BNB
     | ChainId.AVALANCHE
+    | ChainId.ZORA
+    | ChainId.ZORA_SEPOLIA
+    | ChainId.BLAST
+    | ChainId.ROOTSTOCK
   >]: Token;
 } = {
   [ChainId.MAINNET]: new Token(
@@ -204,6 +214,20 @@ export const WETH9: {
   ),
   [ChainId.BASE]: new Token(
     ChainId.BASE,
+    '0x4200000000000000000000000000000000000006',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
+  [ChainId.REDSTONE_GARNET]: new Token(
+    ChainId.REDSTONE_GARNET,
+    '0x4200000000000000000000000000000000000006',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
+  [ChainId.REDSTONE]: new Token(
+    ChainId.REDSTONE,
     '0x4200000000000000000000000000000000000006',
     18,
     'WETH',
