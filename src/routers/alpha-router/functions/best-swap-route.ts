@@ -16,6 +16,7 @@ import { SwapOptions } from '../../router';
 import { AlphaRouterConfig } from '../alpha-router';
 import { IGasModel, L1ToL2GasCosts, usdGasTokensByChain } from '../gas-models';
 
+import { ProviderConfig } from '../../../providers/provider';
 import {
   RouteWithValidQuote,
   V2RouteWithValidQuote,
@@ -42,7 +43,8 @@ export async function getBestSwapRoute(
   portionProvider: IPortionProvider,
   v2GasModel?: IGasModel<V2RouteWithValidQuote>,
   v3GasModel?: IGasModel<V3RouteWithValidQuote>,
-  swapConfig?: SwapOptions
+  swapConfig?: SwapOptions,
+  providerConfig?: ProviderConfig
 ): Promise<BestSwapRoute | null> {
   const now = Date.now();
 
@@ -91,7 +93,8 @@ export async function getBestSwapRoute(
     portionProvider,
     v2GasModel,
     v3GasModel,
-    swapConfig
+    swapConfig,
+    providerConfig
   );
 
   // It is possible we were unable to find any valid route given the quotes.
@@ -156,7 +159,8 @@ export async function getBestSwapRouteBy(
   portionProvider: IPortionProvider,
   v2GasModel?: IGasModel<V2RouteWithValidQuote>,
   v3GasModel?: IGasModel<V3RouteWithValidQuote>,
-  swapConfig?: SwapOptions
+  swapConfig?: SwapOptions,
+  providerConfig?: ProviderConfig
 ): Promise<BestSwapRoute | undefined> {
   // Build a map of percentage to sorted list of quotes, with the biggest quote being first in the list.
   const percentToSortedQuotes = _.mapValues(
@@ -593,9 +597,11 @@ export async function getBestSwapRouteBy(
       }
 
       if (decimalsDiff < 0 && chainId === 324) {
-          log.error(`Decimals diff is negative for ZkSync. This should not happen.
+        log.error(`Decimals diff is negative for ZkSync. This should not happen.
           usdTokenDecimals ${usdTokenDecimals} routeWithValidQuote.gasCostInUSD.currency.decimals
-          ${routeWithValidQuote.gasCostInUSD.currency.decimals} ${JSON.stringify(routeWithValidQuote)}`);
+          ${
+            routeWithValidQuote.gasCostInUSD.currency.decimals
+          } ${JSON.stringify(routeWithValidQuote)}`);
       }
 
       return CurrencyAmount.fromRawAmount(
@@ -706,7 +712,8 @@ export async function getBestSwapRouteBy(
     routes: portionProvider.getRouteWithQuotePortionAdjusted(
       routeType,
       routeWithQuotes,
-      swapConfig
+      swapConfig,
+      providerConfig
     ),
   };
 }
