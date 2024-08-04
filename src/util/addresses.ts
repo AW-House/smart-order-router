@@ -41,6 +41,8 @@ export const V3_CORE_FACTORY_ADDRESSES: AddressMap = {
   [ChainId.BLAST]: CHAIN_TO_ADDRESSES_MAP[ChainId.BLAST].v3CoreFactoryAddress,
   [ChainId.ZORA]: CHAIN_TO_ADDRESSES_MAP[ChainId.ZORA].v3CoreFactoryAddress,
   [ChainId.ZKSYNC]: CHAIN_TO_ADDRESSES_MAP[ChainId.ZKSYNC].v3CoreFactoryAddress,
+  [ChainId.REDSTONE]: CHAIN_TO_ADDRESSES_MAP[ChainId.REDSTONE].v3CoreFactoryAddress,
+  [ChainId.REDSTONE_GARNET]: CHAIN_TO_ADDRESSES_MAP[ChainId.REDSTONE_GARNET].v3CoreFactoryAddress,
   // TODO: Gnosis + Moonbeam contracts to be deployed
 };
 
@@ -66,6 +68,8 @@ export const QUOTER_V2_ADDRESSES: AddressMap = {
   [ChainId.BLAST]: CHAIN_TO_ADDRESSES_MAP[ChainId.BLAST].quoterAddress,
   [ChainId.ZORA]: CHAIN_TO_ADDRESSES_MAP[ChainId.ZORA].quoterAddress,
   [ChainId.ZKSYNC]: CHAIN_TO_ADDRESSES_MAP[ChainId.ZKSYNC].quoterAddress,
+  [ChainId.REDSTONE]: CHAIN_TO_ADDRESSES_MAP[ChainId.REDSTONE].quoterAddress,
+  [ChainId.REDSTONE_GARNET]: CHAIN_TO_ADDRESSES_MAP[ChainId.REDSTONE_GARNET].quoterAddress,
   // TODO: Gnosis + Moonbeam contracts to be deployed
 };
 
@@ -83,6 +87,8 @@ export const NEW_QUOTER_V2_ADDRESSES: AddressMap = {
   [ChainId.BLAST]: '0x9D0F15f2cf58655fDDcD1EE6129C547fDaeD01b1',
   [ChainId.ZORA]: '0x9D0F15f2cf58655fDDcD1EE6129C547fDaeD01b1',
   [ChainId.ZKSYNC]: '0x071Bd2063dF031EDd110E27C6F4CDe50A3DeF2d4',
+  [ChainId.REDSTONE]: '0x2986d9721A49838ab4297b695858aF7F17f38014',
+  [ChainId.REDSTONE_GARNET]: '0xEBe5eAC00Dbbe2b26D1112399d3795f865cD268e',
 };
 
 export const MIXED_ROUTE_QUOTER_V1_ADDRESSES: AddressMap = {
@@ -115,6 +121,8 @@ export const UNISWAP_MULTICALL_ADDRESSES: AddressMap = {
   [ChainId.BLAST]: CHAIN_TO_ADDRESSES_MAP[ChainId.BLAST].multicallAddress,
   [ChainId.ZORA]: CHAIN_TO_ADDRESSES_MAP[ChainId.ZORA].multicallAddress,
   [ChainId.ZKSYNC]: CHAIN_TO_ADDRESSES_MAP[ChainId.ZKSYNC].multicallAddress,
+  [ChainId.REDSTONE]: CHAIN_TO_ADDRESSES_MAP[ChainId.REDSTONE].multicallAddress,
+  [ChainId.REDSTONE_GARNET]: CHAIN_TO_ADDRESSES_MAP[ChainId.REDSTONE_GARNET].multicallAddress,
   // TODO: Gnosis + Moonbeam contracts to be deployed
 };
 
@@ -268,6 +276,20 @@ export const WETH9: {
   [ChainId.ZKSYNC]: new Token(
     ChainId.ZKSYNC,
     '0x5aea5775959fbc2557cc8789bc1bf90a239d9a91',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
+  [ChainId.REDSTONE]: new Token(
+    ChainId.REDSTONE,
+    '0x4200000000000000000000000000000000000006',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
+  [ChainId.REDSTONE_GARNET]: new Token(
+    ChainId.REDSTONE_GARNET,
+    '0x4200000000000000000000000000000000000006',
     18,
     'WETH',
     'Wrapped Ether'

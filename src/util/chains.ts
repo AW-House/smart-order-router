@@ -26,6 +26,8 @@ export const SUPPORTED_CHAINS: ChainId[] = [
   ChainId.BLAST,
   ChainId.ZORA,
   ChainId.ZKSYNC,
+  ChainId.REDSTONE,
+  ChainId.REDSTONE_GARNET,
   // Gnosis and Moonbeam don't yet have contracts deployed yet
 ];
 
@@ -108,6 +110,10 @@ export const ID_TO_CHAIN_ID = (id: number): ChainId => {
       return ChainId.ZORA;
     case 324:
       return ChainId.ZKSYNC;
+    case 690:
+      return ChainId.REDSTONE;
+    case 17069:
+      return ChainId.REDSTONE_GARNET;
     default:
       throw new Error(`Unknown chain id: ${id}`);
   }
@@ -136,6 +142,8 @@ export enum ChainName {
   BLAST = 'blast-mainnet',
   ZORA = 'zora-mainnet',
   ZKSYNC = 'zksync-mainnet',
+  REDSTONE = 'redstone',
+  REDSTONE_GARNET = 'garnet'
 }
 
 export enum NativeCurrencyName {
@@ -230,6 +238,16 @@ export const NATIVE_NAMES_BY_ID: { [chainId: number]: string[] } = {
     'ETHER',
     '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
   ],
+  [ChainId.REDSTONE]: [
+    'ETH',
+    'ETHER',
+    '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+  ],
+  [ChainId.REDSTONE_GARNET]: [
+    'ETH',
+    'ETHER',
+    '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+  ],
 };
 
 export const NATIVE_CURRENCY: { [chainId: number]: NativeCurrencyName } = {
@@ -302,6 +320,10 @@ export const ID_TO_NETWORK_NAME = (id: number): ChainName => {
       return ChainName.ZORA;
     case 324:
       return ChainName.ZKSYNC;
+    case 690:
+      return ChainName.REDSTONE;
+    case 17069:
+      return ChainName.REDSTONE_GARNET;
     default:
       throw new Error(`Unknown chain id: ${id}`);
   }
@@ -351,6 +373,10 @@ export const ID_TO_PROVIDER = (id: ChainId): string => {
       return process.env.JSON_RPC_PROVIDER_ZORA!;
     case ChainId.ZKSYNC:
       return process.env.JSON_RPC_PROVIDER_ZKSYNC!;
+    case ChainId.REDSTONE:
+      return process.env.JSON_RPC_PROVIDER_REDSTONE!;
+    case ChainId.REDSTONE_GARNET:
+      return process.env.JSON_RPC_PROVIDER_REDSTONE_GARNET!;
     default:
       throw new Error(`Chain id: ${id} not supported`);
   }
@@ -523,6 +549,20 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId in ChainId]: Token } = {
   [ChainId.ZKSYNC]: new Token(
     ChainId.ZKSYNC,
     '0x5aea5775959fbc2557cc8789bc1bf90a239d9a91',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
+  [ChainId.REDSTONE]: new Token(
+    ChainId.REDSTONE,
+    '0x4200000000000000000000000000000000000006',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
+  [ChainId.REDSTONE_GARNET]: new Token(
+    ChainId.REDSTONE_GARNET,
+    '0x4200000000000000000000000000000000000006',
     18,
     'WETH',
     'Wrapped Ether'

@@ -171,6 +171,12 @@ export const CACHE_SEED_TOKENS: {
   [ChainId.ZKSYNC]: {
     WETH: WRAPPED_NATIVE_CURRENCY[ChainId.ZKSYNC],
   },
+  [ChainId.REDSTONE]: {
+    WETH: WRAPPED_NATIVE_CURRENCY[ChainId.REDSTONE],
+  },
+  [ChainId.REDSTONE_GARNET]: {
+    WETH: WRAPPED_NATIVE_CURRENCY[ChainId.REDSTONE_GARNET],
+  },
   // Currently we do not have providers for Moonbeam mainnet or Gnosis testnet
 };
 

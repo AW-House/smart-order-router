@@ -162,7 +162,6 @@ Total ticks crossed: 7
 ./bin/cli quote --tokenIn 0x7F5c764cBc14f9669B88837ca1490cCa17c31607 --tokenOut 0x4200000000000000000000000000000000000042 --amount 1 --exactIn --minSplits 1 --protocols v2 --router alpha --chainId 10
 ```
 
-
 ## Optimism-Goerli
 
 ```
@@ -235,6 +234,11 @@ Total ticks crossed: 7
 ./bin/cli quote --tokenIn 0x5aea5775959fbc2557cc8789bc1bf90a239d9a91 --tokenOut 0x1d17cbcf0d6d143135ae902365d2e5e2a16538d4 --amount 10 --exactIn --minSplits 1 --protocols v3 --router alpha --chainId 324
 ```
 
+## Redstone Mainnet
+
+```
+./bin/cli quote --tokenIn 0x4200000000000000000000000000000000000006 --tokenOut 0xd5d59fc063e7548b6015a36feb10b875924a19be --amount 10 --exactIn --minSplits 1 --protocols v3 --router alpha --chainId 690
+```
 
 ## Adding a new Chain
 

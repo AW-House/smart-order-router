@@ -658,6 +658,8 @@ export class AlphaRouter
           break;
         case ChainId.CELO:
         case ChainId.CELO_ALFAJORES:
+        case ChainId.REDSTONE:
+        case ChainId.REDSTONE_GARNET:
           this.onChainQuoteProvider = new OnChainQuoteProvider(
             chainId,
             provider,
